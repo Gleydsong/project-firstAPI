@@ -1,0 +1,14 @@
+{
+  "name": "API de manager",
+  "version": "1.0.0",
+  "description": "API to manage tasks and users",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [],
+  "author": "Guideveloper",
+  "license": "ISC",
+  "type": "module"
+}
