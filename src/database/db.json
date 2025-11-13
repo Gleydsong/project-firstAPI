@@ -1,13 +1,1 @@
-{
-  "tickets": [
-    {
-      "id": "5f813afb-5578-48f5-bb5e-b6396065641f",
-      "equipment": "Computador",
-      "description": "Computador nao ligar",
-      "user_name": "Maria talhoana",
-      "status": "open",
-      "created_at": "2025-11-13T16:15:00.504Z",
-      "updated_at": "2025-11-13T16:15:00.504Z"
-    }
-  ]
-}
+{"tickets":[{"id":"5f813afb-5578-48f5-bb5e-b6396065641f","equipment":"Computador","description":"Computador nao ligar","user_name":"Maria talhoana","status":"open","created_at":"2025-11-13T16:15:00.504Z","updated_at":"2025-11-13T16:15:00.504Z"},{"id":"29ed6f61-a7fd-4a60-9b89-b6799859f16f","equipment":"Teclado","description":"telcadonao ligar","user_name":"jose bastista","status":"open","created_at":"2025-11-13T16:33:50.752Z","updated_at":"2025-11-13T16:33:50.752Z"},{"id":"c502ca32-d031-4950-870b-3436155ac061","equipment":"Teclado","description":"telcadonao ligar","user_name":"jose bastista","status":"open","created_at":"2025-11-13T16:51:55.022Z","updated_at":"2025-11-13T16:51:55.022Z"},{"id":"e57ffb93-b188-45a3-85e7-30d983ea4eb6","equipment":"Teclado","description":"telcadonao ligar","user_name":"jose bastista","status":"open","created_at":"2025-11-13T16:56:38.634Z","updated_at":"2025-11-13T16:56:38.634Z"},{"id":"9f94f10d-6bb7-4e87-9490-f90675873b19","equipment":"Teclado","description":"telcadonao ligar","user_name":"jose bastista","status":"open","created_at":"2025-11-13T17:27:01.521Z","updated_at":"2025-11-13T17:27:01.521Z"},{"id":"1fe2f4ce-7699-4d21-9e9f-de7b38fc9003","equipment":"Teclado","description":"telcadonao ligar","user_name":"jose bastista","status":"open","created_at":"2025-11-13T17:37:13.208Z","updated_at":"2025-11-13T17:37:13.208Z"},{"id":"02f588bf-be4e-4b25-8231-062d43af5f4f","equipment":"Test","description":"Test","user_name":"Test","status":"open","created_at":"2025-11-13T17:39:05.850Z","updated_at":"2025-11-13T17:39:05.850Z"},{"id":"cd02ccbb-13d1-42b3-89c4-87256a13fd1f","equipment":"Teclado","description":"telcadonao ligar","user_name":"jose bastista","status":"open","created_at":"2025-11-13T17:39:32.942Z","updated_at":"2025-11-13T17:39:32.942Z"},{"id":"55291c41-33f3-4fb4-b56c-f6e87f61dab5","equipment":"Teclado","description":"telcadonao ligar","user_name":"jose bastista","status":"open","created_at":"2025-11-13T17:41:08.391Z","updated_at":"2025-11-13T17:41:08.391Z"},{"id":"181e1498-9f3f-435e-a978-62af83c1efd3","equipment":"Teclado","description":"telcadonao ligar","user_name":"jose bastista","status":"open","created_at":"2025-11-13T17:41:30.474Z","updated_at":"2025-11-13T17:41:30.474Z"}]}

@@ -26,4 +26,49 @@ export class Database {
     }
     this.#persist();
   }
+
+  select(table, filters) {
+    let data = this.#database[table] ?? [];
+
+    if (filters) {
+      data = data.filter((row) => {
+        return Object.entries(filters).every(([key, value]) => {
+          const rowValue = row[key];
+          if (typeof rowValue !== "string") return false;
+          return rowValue.toLowerCase().includes(value.toLowerCase());
+        });
+      });
+    }
+
+    return data;
+  }
+
+  update(table, id, data) {
+    const rowIndex = this.#database[table].findIndex((row) => row.id === id);
+
+    if (rowIndex > -1) {
+      this.#database[table][rowIndex] = {
+        ...this.#database[table][rowIndex],
+        ...data,
+        updated_at: new Date(),
+      };
+      this.#persist();
+      return this.#database[table][rowIndex];
+    }
+
+    return null;
+  }
+
+  delete(table, id) {
+    const rowIndex = this.#database[table].findIndex((row) => row.id === id);
+
+    if (rowIndex > -1) {
+      const deletedRow = this.#database[table][rowIndex];
+      this.#database[table].splice(rowIndex, 1);
+      this.#persist();
+      return deletedRow;
+    }
+
+    return null;
+  }
 }

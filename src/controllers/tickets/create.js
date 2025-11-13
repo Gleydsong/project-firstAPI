@@ -1,4 +1,8 @@
-import { randomUUID } from "node:crypto";
+import {
+  validateTicketData,
+  formatTicketResponse,
+  createTicketObject,
+} from "../../utils/ticketUtils.js";
 
 export function create({ req, res, database }) {
   if (!req.body) {
@@ -7,27 +11,21 @@ export function create({ req, res, database }) {
       .end(JSON.stringify({ error: "Invalid JSON body" }));
   }
 
-  const { equipment, description, user_name } = req.body;
-
-  if (!equipment || !description || !user_name) {
-    return res.writeHead(400).end(
-      JSON.stringify({
-        error: "Missing required fields: equipment, description, user_name",
-      })
-    );
+  const validation = validateTicketData(req.body);
+  if (!validation.isValid) {
+    return res
+      .writeHead(400)
+      .end(
+        JSON.stringify({
+          error: "Validation failed",
+          details: validation.errors,
+        })
+      );
   }
 
-  const ticket = {
-    id: randomUUID(),
-    equipment,
-    description,
-    user_name,
-    status: "open",
-    created_at: new Date(),
-    updated_at: new Date(),
-  };
-
+  const ticket = createTicketObject(req.body);
   database.insert("tickets", ticket);
 
-  return res.writeHead(201).end(JSON.stringify(ticket));
+  const formattedTicket = formatTicketResponse(ticket);
+  return res.writeHead(201).end(JSON.stringify(formattedTicket));
 }
